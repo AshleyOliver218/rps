@@ -72,20 +72,34 @@ justify-content: space-around;
 .playersChoiceRock{
 width: 200px;
 height: 200px;
-border: black 10px solid;
+/* border: black 10px solid; */
 /* background-image: url("images/Rock.png"); */
 }
 .playersChoiceScissors{
 width: 200px;
 height: 200px;
-border: black 10px solid;
+/* border: black 10px solid; */
 /* background-image: url("images/Scissors.png"); */
 }
 
 .playersChoicePaper{
 width: 200px;
 height: 200px;
-border: black 10px solid;
+/* border: black 10px solid; */
 /* background-image: url("images/Paper.png"); */
 }
 
+#choiceRock:hover{
+transform: scale(1.2);
+transition: 500ms;
+}
+
+#choicePaper:hover{
+transform: scale(1.2);
+transition: 500ms;
+}
+
+#choiceScissors:hover{
+transform: scale(1.2);
+transition: 500ms;
+}
