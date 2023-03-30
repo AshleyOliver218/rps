@@ -1,15 +1,18 @@
-header{
-  margin-top:40px;
+header {
+  margin-top: 40px;
+  padding-top: 40px;
+
   display: flex;
   justify-content: center;
   background-color: lightblue;
+  justify-content: space-between;
   width: 80vw;
-  height: 45%;
-  
+  height: 35%;
+
 }
 
 body {
-  background-image: url("images/rock-pattern.png");
+  background-color: darkblue;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -18,88 +21,100 @@ body {
 }
 
 main {
+  position: relative;
   background-color: lightblue;
-  height: 55%;
+  height: 65%;
   width: 80vw;
   border: 2px dotted black;
 }
-#score-box{
-    border:2px solid blue;
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly ;  
-    flex-direction: column;
-    height:150px;
-    width: 150px;
-    
+
+#score-box {
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  align-self: flex-end;
+  justify-self: flex-end;
+  flex-direction: column;
+  height: 150px;
+  width: 150px;
+
 }
 
-#number-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    align-content: space-evenly;
-    height: 50px;
-    
-    
-}
-#score{
-width: 150px;
-display:flex;
-justify-content: center;
-align-items: flex-start;
-font-size: 36px;
+#messageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-#human-score{
-font-size: 40px;
-}
-#dash{
-font-size: 60px;
-}
-
-#computer-score{
-    font-size: 40px;
-}
-
-#choice-box{
-display: flex;
-justify-content: space-around;
+#number-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-content: space-evenly;
+  height: 50px;
 
 
 }
-.playersChoiceRock{
-width: 200px;
-height: 200px;
-/* border: black 10px solid; */
-/* background-image: url("images/Rock.png"); */
-}
-.playersChoiceScissors{
-width: 200px;
-height: 200px;
-/* border: black 10px solid; */
-/* background-image: url("images/Scissors.png"); */
+
+#score {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
 }
 
-.playersChoicePaper{
-width: 200px;
-height: 200px;
-/* border: black 10px solid; */
-/* background-image: url("images/Paper.png"); */
+#human-score {
+  font-size: 40px;
 }
 
-#choiceRock:hover{
-transform: scale(1.2);
-transition: 500ms;
+#dash {
+  font-size: 60px;
 }
 
-#choicePaper:hover{
-transform: scale(1.2);
-transition: 500ms;
+#computer-score {
+  font-size: 40px;
 }
 
-#choiceScissors:hover{
-transform: scale(1.2);
-transition: 500ms;
+#choice-box {
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.playersChoiceRock {
+  width: 200px;
+  height: 200px;
+  /* border: black 10px solid; */
+  /* background-image: url("images/Rock.png"); */
+}
+
+.playersChoiceScissors {
+  width: 200px;
+  height: 200px;
+
+}
+
+.playersChoicePaper {
+  width: 200px;
+  height: 200px;
+}
+
+#choiceRock:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+#choicePaper:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+#choiceScissors:hover {
+  transform: scale(1.2);
+  transition: 500ms;
 }
