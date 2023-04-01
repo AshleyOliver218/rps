@@ -115,7 +115,7 @@ let gameLogic = (playerChoiceParam) => {
 
     if (playerChoice === "Rock" && compChoice === "Paper") {
         choose.style.display = "none"
-        messages.textContent = "The computer wins round!"
+        messages.textContent = "The computer wins this round!"
         console.log("The Computer Wins Round")
         setPlayerChoiceAsPaper.style.border = "4px dotted red"
         setPlayerChoiceAsScissors.style.border = "0"
@@ -128,7 +128,7 @@ let gameLogic = (playerChoiceParam) => {
     }
     if (playerChoice === "Scissors" && compChoice === "Rock") {
         choose.style.display = "none"
-        messages.textContent = "The computer wins round!"
+        messages.textContent = "The computer wins this round!"
         console.log("The Computer Wins Round")
         setPlayerChoiceAsPaper.style.border = "0"
         setPlayerChoiceAsRock.style.border = "4px dotted red"
@@ -140,7 +140,7 @@ let gameLogic = (playerChoiceParam) => {
     }
     if (playerChoice === "Paper" && compChoice === "Scissors") {
         choose.style.display = "none"
-        messages.textContent = "The computer wins round!"
+        messages.textContent = "The computer wins this round!"
         console.log("The Computer Wins Round")
         setPlayerChoiceAsRock.style.border = "0"
         setPlayerChoiceAsScissors.style.border = "4px dotted red"
