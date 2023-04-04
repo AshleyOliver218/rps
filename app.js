@@ -16,27 +16,29 @@ humanScore.textContent = playerScore    //setting the text of the human score va
 computerScore.textContent = compScore   //setting the text of the human score variable = to compScore
 
 //adding event listener for popup buttons
+//open play pop button
 openPopupButton.addEventListener('click', () => {
     let popup = document.querySelector(openPopupButton.dataset.popupTarget) //grabs html popup
     openPopup(popup)    //runs function to open popup
 
 })
+//popup close button
 closePopupButton.addEventListener('click', () => {
-    let popup = document.querySelector(openPopupButton.dataset.popupTarget)
+    let popup = document.querySelector(openPopupButton.dataset.popupTarget) //grabs html popup
     closePopup(popup)    //runs  function to close popup
 
 })
-
+//function to open popup
 function openPopup(popup){
-    if(popup == null) return
-    popup.classList.add("active")
-    popupOverlay.classList.add("active")
+    if(popup == null) return    //verification
+    popup.classList.add("active")   //adds the "active" class to the popup
+    popupOverlay.classList.add("active")    //adds the "active" class to the overlay
 }
-
+//function to close popup
 function closePopup(popup){
-    if(popup == null) return
-    popup.classList.remove("active")
-    popupOverlay.classList.remove("active")
+    if(popup == null) return    //verification
+    popup.classList.remove("active")     //removes the "active" class to the popup
+    popupOverlay.classList.remove("active") //removes the "active" class to the overlay
 }
 //click picture to select choices
 //add event listener playerChoice: rock
