@@ -2,6 +2,8 @@ header {
   margin-top: 40px;
   padding-top: 40px;
   border: 8px solid lightgray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   border-bottom: 0px;
   display: flex;
   justify-content: center;
@@ -31,21 +33,26 @@ main {
   width: 80vw;
   border: 8px solid lightgray;
   border-top: 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   align-items: flex-end;
+  margin-bottom: 40px;
 }
 
 #score-box {
   border: 4px solid rgb(4, 4, 53);
-  border-style: 2px double lightgray ;
+  border-style: 2px double lightgray;
+  border-radius: 10px;
+  background-color: lightgray;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   align-self: flex-start;
   justify-self: flex-end;
   flex-direction: column;
-  height: 150px;
-  width: 150px;
-
+  height: 200px;
+  width: 200px;
+  font: 20px Times New Roman;
 }
 
 #messageBox {
@@ -62,7 +69,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  align-content: space-evenly;
+  align-content: space-between;
   height: 50px;
 
 
@@ -73,11 +80,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-size: 24px;
+  font-size: 20px Times New Roman;
 }
-
+#you{
+  font-size: 15px;
+}
 #human-score {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 #dash {
@@ -85,7 +94,7 @@ main {
 }
 
 #computer-score {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 #choice-box {
@@ -127,14 +136,81 @@ main {
   transform: scale(1.2);
   transition: 500ms;
 }
-#button{
+#popup-button{
   background-color: rgb(4, 4, 53);
   color: lightgrey;
+  margin-left: 40px;
+  border-radius: 10px;
  
 }
-#button:hover{
+#popup-button:hover{
   background-color: lightgray;
   transform: scale(1.5);
   transition: 500ms;
   color: rgb(4, 4, 53); 
+}
+
+#popup-body{
+  padding: 10px 15px;
+  /* display:none; */
+}
+
+#overlay{
+  opacity: 0;
+  position: fixed;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(4, 4, 53, .5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.popup{
+  padding:15px 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border:4px solid rgb(4, 4, 53);
+  border-radius: 10px; 
+  z-index:40;
+  background-color: lightgray;
+  color:rgb(4, 4, 53);
+  width: 500px;
+  max-width: 80%;
+  font-size: 20px;
+}
+
+.popup.active{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header{
+padding:10px 15px;
+display:flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid rgb(4, 4, 53);
+}
+
+.popup-title{
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.popup-close{
+  background-color: rgb(4, 4, 53);
+  color:lightgray;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
 }

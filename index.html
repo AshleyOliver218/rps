@@ -1,48 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-        <img src="images/title.png" alt="Title" width="650px" height="200px" id="title">
-        <div id="score-box">
-          <h1 id="score">score:<br/>you/comp</h1> 
-          <div id="number-box">
-            <p  id="human-score" data-human-score>0</p>
-            <p id="dash">|</p>
-            <p id="computer-score" data-computer-score>0</p>
-          </div>
-        </div>
-    </header>
-    <main>
-      <button id="button">Start</button>
-      <div id="popup-body">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi voluptatibus esse tempore totam impedit accusantium ipsa, hic, obcaecati accusamus facilis assumenda. Tempora nostrum dignissimos dolore adipisci quaerat, reiciendis vel doloribus.
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="images/title.png" alt="Title" width="650px" height="200px" id="title">
+    <div id="score-box">
+      <h1 id="score">Score:</h1>
+      <h2 id="you">You | Comp</h2>
+      <div id="number-box">
+        <p id="human-score" data-human-score>0</p>
+        <p id="dash">|</p>
+        <p id="computer-score" data-computer-score>0</p>
       </div>
-        <div id="messageBox" >
-          <h1 id="choose" >Choose:</h1>
-          <p id="message" ></p>
+    </div>
+  </header>
+  <main>
+    <button data-popup-target="#pop-up" id="popup-button">Play</button>
+    <div class="popup" id="pop-up">
+      <div class="popup-header">
+        <div class="popup-title">Rules of the game:</div>
+        <button data-close-button class="popup-close">&times;</button>
+      </div>
+      <div class="popup-body">
+        Lets play "Rock, Paper, Scissors!" In this classic game "Rock" beats "Scissors", "Paper" beats "Rock", and
+        "Scissors" beats "Paper". When you choose between "Rock", "Paper", or "Scissors", click on the picture of your
+        preferred item. Whichever item you choose will
+        have a blue dotted box around it marking your selection. Whichever item the computer chooses will have a red
+        dotted
+        box around it. If both you and the computer choose the same item, it will have a purple dotted box around it.
+        Whichever item, chosen by either you or the computer that is the winning item, will be displayed the largest on
+        the screen. Whoever wins the round gets a point on the score board. If you and the computer tie, neither gets a
+        point. Whoever wins 2 rounds first wins the game! Click the x to getted started!
+      </div>
+    </div>
+    <div id="overlay"></div>
+
+
+    <div id="messageBox">
+      <h1 id="choose">Choose:</h1>
+      <p id="message">Rock, Paper, or Scissors</p>
+    </div>
+    <section>
+
+      <div id="choice-box">
+        <div class="playersChoiceRock">
+          <img id="choiceRock" src="images/Rock.png" width="200px" height="200px">
         </div>
-        <section>
-            
-          <div id="choice-box">
-            <div class="playersChoiceRock">
-                <img id="choiceRock" src="images/Rock.png" width="200px" height="200px">
-            </div>
-            <div class="playersChoicePaper">
-                <img id="choicePaper" src="images/Paper.png" width="200px" height="200px">
-            </div>
-            <div class="playersChoiceScissors">
-                <img id="choiceScissors" src="images/Scissors.png" width="200px" height="s00px">
-            </div>
-         </div>    
-        </section>
-    </main>
-	<script src="app.js"></script>
-  </body>
+        <div class="playersChoicePaper">
+          <img id="choicePaper" src="images/Paper.png" width="200px" height="200px">
+        </div>
+        <div class="playersChoiceScissors">
+          <img id="choiceScissors" src="images/Scissors.png" width="200px" height="s00px">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+
 </html>
